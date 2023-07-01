@@ -5,7 +5,7 @@
 def pascal_triangle(n):
     """Solving of Pascal triangle"""
     if n <= 0:
-        return [[]]
+        return []
     if n == 1:
         return [[1]]
 
