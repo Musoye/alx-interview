@@ -4,6 +4,8 @@
 
 def pascal_triangle(n):
     """Solving of Pascal triangle"""
+    if type(n) is not int:
+        return ("n should be an integer")
     if n <= 0:
         return []
     if n == 1:
