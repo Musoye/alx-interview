@@ -10,6 +10,8 @@ def pascal_triangle(n):
         return []
     if n == 1:
         return [[1]]
+    if n == 2:
+        return [[1], [1, 1]]
 
     sub = []
     step = []
@@ -19,6 +21,8 @@ def pascal_triangle(n):
         if i == 1:
             final.append([1])
         elif i == 2:
+            final.append([1, 1])
+        elif i == 3:
             final.append([1, 2, 1])
         else:
             sub = final[i - 2]
@@ -30,7 +34,7 @@ def pascal_triangle(n):
                 else:
                     step.append(sub[j-1] + sub[j])
 
-        if i > 2:
+        if i > 3:
             final.append(step)
             step = []
     return (final)
