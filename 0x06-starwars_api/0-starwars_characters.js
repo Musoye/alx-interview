@@ -1,14 +1,15 @@
 #!/usr/bin/node
 // star wars api
-const request = require('request');
+const reques = require('request');
+const util = require('util');
+const request = util.promisify(reques)
 
 const star = (url) => {
   request(url, (error, response, body) => {
     if (error) {
       throw error;
     }
-    const characters = JSON.parse(body);
-    const people = characters.characters;
+    const people = JSON.parse(body).characters;
     for (const character of people) {
       request(character, (error, response, body) => {
         if (error) {
