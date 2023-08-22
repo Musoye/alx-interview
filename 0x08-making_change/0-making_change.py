@@ -1,5 +1,5 @@
-#!/usr/bin/env python3
-"""making cganges Interview Question"""
+#!/usr/bin/python3
+"""making changes Interview Question"""
 
 
 def makeChange(coins, total):
